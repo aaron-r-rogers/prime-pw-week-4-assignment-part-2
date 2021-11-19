@@ -1,0 +1,106 @@
+header {
+    background-color: #0247FE;
+    padding: 2%;
+    margin: 2%;
+    border: #343409;
+    border-style: groove;
+    border-width: 12pt;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("Images/paperBackground.jpeg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #FFFFFF;
+}
+
+p {
+  color: #FE2712;
+  font-size: 18px;
+}
+
+h1 {
+    color: #FEFE33;
+}
+
+.info {
+/* I tried moving my padding and margins from h2 and h3 up
+to my .info class, but they were not applied.  I did this for my
+header successfully, so is this as simple as it works for divs 
+but not classes?
+*/
+}
+
+h2 {
+  background-color: #F7D7D4;
+  color: #343409;
+  padding: 2%;
+  margin: 2%;
+  border-radius: 10px;
+  text-align: center;
+}
+
+h3 {
+  background-color: #0247FE;
+  color: #FEFE33;
+  padding: 2%;
+  margin: 2%;
+  border: #343409;
+  border-style: solid;
+  border-width: 4pt;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#fade {
+  position:relative;
+  height:281px;
+  width:450px;
+  margin:0 auto;
+}
+#fade img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#fade img.transparent {
+opacity:0;
+}
+
+@keyframes FadeInOut {
+  0% {
+  opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+
+#fade img.top {
+animation-name: FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 10s;
+animation-direction: alternate;
+}
+
+/* Generally speaking, I'm struggling to come up with logic for
+how to organize my CSS.  HTML and JS are intuitive, but the 
+freewheeling nature of CSS bothers me.  Any resources? */
